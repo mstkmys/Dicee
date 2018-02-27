@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		6833BB27204544290095F37E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6833BB26204544290095F37E /* AppDelegate.swift */; };
 		6833BB29204544290095F37E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6833BB28204544290095F37E /* ViewController.swift */; };
-		6833BB2C204544290095F37E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6833BB2A204544290095F37E /* Main.storyboard */; };
 		6833BB2E204544290095F37E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6833BB2D204544290095F37E /* Assets.xcassets */; };
 		6833BB31204544290095F37E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6833BB2F204544290095F37E /* LaunchScreen.storyboard */; };
 		6833BB3C204544290095F37E /* DiceeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6833BB3B204544290095F37E /* DiceeTests.swift */; };
@@ -37,7 +36,6 @@
 		6833BB23204544290095F37E /* Dicee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dicee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6833BB26204544290095F37E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6833BB28204544290095F37E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6833BB2B204544290095F37E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6833BB2D204544290095F37E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6833BB30204544290095F37E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6833BB32204544290095F37E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -97,11 +95,9 @@
 		6833BB25204544290095F37E /* Dicee */ = {
 			isa = PBXGroup;
 			children = (
+				6833BB542045B2C50095F37E /* Resources */,
+				6833BB552045B2D40095F37E /* Classes */,
 				6833BB26204544290095F37E /* AppDelegate.swift */,
-				6833BB28204544290095F37E /* ViewController.swift */,
-				6833BB2A204544290095F37E /* Main.storyboard */,
-				6833BB2D204544290095F37E /* Assets.xcassets */,
-				6833BB2F204544290095F37E /* LaunchScreen.storyboard */,
 				6833BB32204544290095F37E /* Info.plist */,
 			);
 			path = Dicee;
@@ -123,6 +119,47 @@
 				6833BB48204544290095F37E /* Info.plist */,
 			);
 			path = DiceeUITests;
+			sourceTree = "<group>";
+		};
+		6833BB542045B2C50095F37E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6833BB2D204544290095F37E /* Assets.xcassets */,
+				6833BB2F204544290095F37E /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6833BB552045B2D40095F37E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6833BB582045B2FE0095F37E /* Views */,
+				6833BB572045B2F10095F37E /* Controllers */,
+				6833BB562045B2E80095F37E /* Extensions */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		6833BB562045B2E80095F37E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6833BB572045B2F10095F37E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6833BB28204544290095F37E /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6833BB582045B2FE0095F37E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,7 +271,6 @@
 			files = (
 				6833BB31204544290095F37E /* LaunchScreen.storyboard in Resources */,
 				6833BB2E204544290095F37E /* Assets.xcassets in Resources */,
-				6833BB2C204544290095F37E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +332,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6833BB2A204544290095F37E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6833BB2B204544290095F37E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6833BB2F204544290095F37E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -363,7 +391,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -414,7 +442,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -429,11 +457,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WDFA67X5D5;
 				INFOPLIST_FILE = Dicee/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.mstk.Dicee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -444,11 +473,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WDFA67X5D5;
 				INFOPLIST_FILE = Dicee/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.mstk.Dicee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
