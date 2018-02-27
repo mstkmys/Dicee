@@ -9,10 +9,20 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let rootView: RootView = {
+       
+        let rootView = RootView(frame: UIScreen.main.bounds)
+        
+        return rootView
+        
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        [rootView].forEach{ self.view.addSubview($0) }
+        
     }
 
 }
