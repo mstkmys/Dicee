@@ -10,10 +10,29 @@ import UIKit
 
 class RootView: UIView {
     
+    let bg: UIImageView = {
+       
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "newbackground")
+        
+        return imageView
+        
+    }()
+    
+    let logoImageView: UIImageView = {
+       
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "diceeLogo")
+        imageView.contentMode = .scaleToFill
+        
+        return imageView
+        
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        [].forEach{ self.addSubview($0) }
+        [bg, logoImageView].forEach{ self.addSubview($0) }
         
     }
     
@@ -23,6 +42,32 @@ class RootView: UIView {
     
     override func layoutSubviews() {
         
+        bg.anchor(
+            top: self.safeAreaLayoutGuide.topAnchor,
+            leading: self.leadingAnchor,
+            bottom: self.bottomAnchor,
+            trailing: self.trailingAnchor
+        )
+        
+        logoImageView.anchor(
+            top: self.safeAreaLayoutGuide.topAnchor,
+            leading: self.leadingAnchor,
+            bottom: nil,
+            trailing: self.trailingAnchor,
+            padding: .init(top: 50, left: 50, bottom: 0, right: 50  ),
+            size: .init(width: 0, height: self.frame.size.height / 5)
+        )
+        
     }
 
 }
+
+
+
+
+
+
+
+
+
+
