@@ -43,6 +43,13 @@ extension UIView {
         
     }
     
+    func anchorSize(to view: UIView) {
+        
+        widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
+        
+    }
+    
 }
 
 

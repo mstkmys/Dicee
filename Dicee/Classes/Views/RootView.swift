@@ -23,16 +23,47 @@ class RootView: UIView {
        
         let imageView = UIImageView()
         imageView.image = UIImage(named: "diceeLogo")
-        imageView.contentMode = .scaleToFill
+        imageView.contentMode = .scaleAspectFit
         
         return imageView
+        
+    }()
+    
+    let diceLeftImageView: UIImageView = {
+       
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "dice1")
+        imageView.contentMode = .scaleAspectFit
+        
+        return imageView
+        
+    }()
+    
+    let diceRightImageView: UIImageView = {
+        
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "dice1")
+        imageView.contentMode = .scaleAspectFit
+        
+        return imageView
+        
+    }()
+    
+    let rollButton: UIButton = {
+        
+        let button = UIButton()
+        button.setTitle("Roll", for: .normal)
+        button.titleLabel?.adjustsFontSizeToFitWidth = true
+        button.backgroundColor = .black
+        
+        return button
         
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        [bg, logoImageView].forEach{ self.addSubview($0) }
+        [bg, logoImageView, diceLeftImageView, diceRightImageView, rollButton].forEach{ self.addSubview($0) }
         
     }
     
@@ -54,9 +85,36 @@ class RootView: UIView {
             leading: self.leadingAnchor,
             bottom: nil,
             trailing: self.trailingAnchor,
-            padding: .init(top: 50, left: 50, bottom: 0, right: 50  ),
+            padding: .init(top: 50, left: 0, bottom: 0, right: 0 ),
             size: .init(width: 0, height: self.frame.size.height / 5)
         )
+        
+        diceLeftImageView.anchor(
+            top: logoImageView.bottomAnchor,
+            leading: self.leadingAnchor,
+            bottom: nil,
+            trailing: nil,
+            padding: .init(top: 50, left: 0, bottom: 0, right: 0),
+            size: .init(width: self.frame.size.width / 2, height: self.frame.size.height / 5)
+        )
+        
+        diceRightImageView.anchor(
+            top: diceLeftImageView.topAnchor,
+            leading: diceLeftImageView.trailingAnchor,
+            bottom: nil,
+            trailing: self.trailingAnchor
+        )
+        diceRightImageView.anchorSize(to: diceLeftImageView)
+        
+        rollButton.anchor(
+            top: nil,
+            leading: nil,
+            bottom: self.bottomAnchor,
+            trailing: nil,
+            padding: .init(top: 0, left: 0, bottom: 50, right: 0),
+            size: .init(width: self.frame.size.width / 2, height: 80)
+        )
+        rollButton.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         
     }
 
