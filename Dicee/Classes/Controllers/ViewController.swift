@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AudioToolbox
 
 class ViewController: UIViewController {
     
@@ -44,6 +45,10 @@ class ViewController: UIViewController {
         
         randomDiceIndex1 = Int(arc4random_uniform(6))
         randomDiceIndex2 = Int(arc4random_uniform(6))
+        
+        if randomDiceIndex1 == randomDiceIndex2 {
+            AudioServicesPlaySystemSound(SystemSoundID(1013))
+        }
         
         rootView.diceLeftImageView.image = diceArray[randomDiceIndex1]
         rootView.diceRightImageView.image = diceArray[randomDiceIndex2]
