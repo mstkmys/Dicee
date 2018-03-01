@@ -55,6 +55,7 @@ class RootView: UIView {
         button.setTitle("Roll", for: .normal)
         button.titleLabel?.adjustsFontSizeToFitWidth = true
         button.backgroundColor = .black
+        button.addTarget(self, action: #selector(ViewController.rollButtonTapped(_:)), for: .touchUpInside)
         
         return button
         
@@ -112,7 +113,7 @@ class RootView: UIView {
             bottom: self.bottomAnchor,
             trailing: nil,
             padding: .init(top: 0, left: 0, bottom: 50, right: 0),
-            size: .init(width: self.frame.size.width / 2, height: 80)
+            size: .init(width: self.frame.size.width / 3, height: 50)
         )
         rollButton.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         
