@@ -6,7 +6,7 @@
 )](https://developer.apple.com/swift)
 [![Twitter](https://img.shields.io/badge/twitter-@mm_manome-blue.svg?style=flat)](https://twitter.com/mm_manome)
 
-This app is Dice App.
+![dice](https://user-images.githubusercontent.com/12792235/36830578-8ce97712-1d67-11e8-839e-91c076049093.gif)
 
 ## Author
 **Masataka Miyoshi**
